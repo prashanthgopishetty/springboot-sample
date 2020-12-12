@@ -2,3 +2,6 @@
 target/*
 .git
 spring*.iml
+*.mv.db
+*.trace.db
+.idea/
