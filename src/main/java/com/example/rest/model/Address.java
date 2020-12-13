@@ -1,5 +1,7 @@
 package com.example.rest.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.Calendar;
 import java.util.Set;
@@ -30,6 +32,7 @@ public class Address extends AbstractModel {
     @Column(name = "pin")
     private String pin;
 
+    @JsonBackReference
     @OneToMany(mappedBy="address")
     private Set<Account> accountSet;
 
