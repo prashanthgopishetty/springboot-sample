@@ -20,12 +20,19 @@ public class Account extends AbstractModel {
     @Id
     @GeneratedValue
     private Integer id;
+
     @Column(name="first_name")
     private String firstName;
+
     @Column(name="last_name")
     private String lastName;
+
     @Column(name="contact_number")
     private String contactNumber;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "address")
+    private Address address;
 
     public Integer getId() {
         return id;
@@ -59,6 +66,14 @@ public class Account extends AbstractModel {
         this.contactNumber = contactNumber;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "Account{" +
@@ -66,6 +81,7 @@ public class Account extends AbstractModel {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", contactNumber='" + contactNumber + '\'' +
+                ", address=" + address +
                 "} " + super.toString();
     }
 }
