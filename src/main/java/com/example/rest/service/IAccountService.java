@@ -1,10 +1,8 @@
 package com.example.rest.service;
 
-import com.example.rest.model.Account;
-
-import java.util.List;
+import com.example.rest.model.Accounts;
 
 public interface IAccountService {
 
-    List<Account> getAllAccounts();
+    Accounts getAllAccounts();
 }
