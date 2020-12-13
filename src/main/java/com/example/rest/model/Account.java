@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="TBL_ACCOUNT")
-public class Account {
+public class Account extends AbstractModel {
 
     public Account() {
 
@@ -66,6 +66,6 @@ public class Account {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", contactNumber='" + contactNumber + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }
