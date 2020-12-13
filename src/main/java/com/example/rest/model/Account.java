@@ -5,6 +5,7 @@ import org.hibernate.annotations.NamedQueries;
 import org.hibernate.annotations.NamedQuery;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @NamedQueries({
         @NamedQuery(name = "findAllAccounts", query = "from Account a")
